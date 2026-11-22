@@ -174,7 +174,7 @@ def _summarize_with_gemini(transcript: str, video_url: str) -> str:
     max_chars = 80000
     truncated = transcript[:max_chars] + ("..." if len(transcript) > max_chars else "")
     response  = _client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.6-flash",
         contents=f"Please summarize this YouTube video transcript:\n\n{truncated}",
         config=types.GenerateContentConfig(
             system_instruction=(
