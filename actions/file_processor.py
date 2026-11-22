@@ -37,7 +37,7 @@ def _gemini_client():
 
     class _W:
         def generate_content(self, contents):
-            return _c.models.generate_content(model="gemini-2.5-flash", contents=contents)
+            return _c.models.generate_content(model="gemini-3.6-flash", contents=contents)
 
     return _W()
 
